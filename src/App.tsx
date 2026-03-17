@@ -16,6 +16,7 @@ import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import OrderSuccess from "./pages/OrderSuccess";
+import Cart from "./pages/Cart";
 
 function Home() {
   return (
@@ -46,6 +47,7 @@ export default function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/order-success" element={<OrderSuccess />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </BrowserRouter>
   );

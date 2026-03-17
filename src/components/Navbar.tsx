@@ -1,12 +1,12 @@
 import { motion } from "motion/react";
 import { ShoppingBag, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useCart } from "@/src/lib/cartContext";
-import CartDrawer from "@/src/components/CartDrawer";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [cartOpen, setCartOpen] = useState(false);
+  const navigate = useNavigate();
   const { count } = useCart();
 
   return (
@@ -24,7 +24,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center space-x-6">
-            <button className="relative" onClick={() => setCartOpen(true)}>
+            <button className="relative" onClick={() => navigate("/cart")}>
               <ShoppingBag size={20} strokeWidth={1.2} />
               {count > 0 && (
                 <span className="absolute -top-1 -right-1 bg-beige-300 text-white text-[8px] w-3.5 h-3.5 rounded-full flex items-center justify-center">
@@ -52,7 +52,6 @@ export default function Navbar() {
         )}
       </nav>
 
-      <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} />
     </>
   );
 }

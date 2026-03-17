@@ -1,19 +1,16 @@
-import { useState } from "react";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router-dom";
 import closeupImg from "@/src/assets/closeup.png";
 import { redirectToCheckout } from "@/src/lib/checkout";
 import { useCart } from "@/src/lib/cartContext";
-import CartDrawer from "@/src/components/CartDrawer";
 
 export default function ProductPage() {
   const navigate = useNavigate();
   const { addToCart } = useCart();
-  const [cartOpen, setCartOpen] = useState(false);
 
   const handleAddToCart = () => {
     addToCart();
-    setCartOpen(true);
+    navigate("/cart");
   };
 
   return (
@@ -108,7 +105,6 @@ export default function ProductPage() {
         </div>
       </div>
 
-      <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} />
     </>
   );
 }
