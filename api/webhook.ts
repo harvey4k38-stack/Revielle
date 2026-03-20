@@ -35,7 +35,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const email = session.customer_details?.email ?? "Unknown";
     const name = session.customer_details?.name ?? "Unknown";
     const amount = ((session.amount_total ?? 0) / 100).toFixed(2);
-    const shipping = session.shipping_details?.address;
+    const shipping = (session as any).shipping_details?.address;
 
     await resend.emails.send({
       from: "Revielle Orders <onboarding@resend.dev>",
