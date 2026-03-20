@@ -50,7 +50,7 @@ export default function ProductPage() {
                 Revielle <br /> Age-Defying Cream
               </h1>
               <div className="flex items-center space-x-4">
-                <p className="text-3xl font-serif font-light">$14.99</p>
+                <p className="text-3xl font-serif font-light">$29.95</p>
                 <p className="text-xl font-serif font-light text-ink/40 line-through">$45.99</p>
               </div>
 

@@ -17,7 +17,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
               name: "Revielle Age-Defying Cream",
               description: "Clinically inspired anti-aging cream — smooth, firm, and restore your skin.",
             },
-            unit_amount: 1499,
+            unit_amount: 2995,
           },
           quantity: 1,
         },

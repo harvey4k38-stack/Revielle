@@ -17,7 +17,7 @@ interface CartContextType {
 
 const CartContext = createContext<CartContextType | null>(null);
 
-const PRODUCT = { name: "Revielle Age-Defying Cream", price: 14.99 };
+const PRODUCT = { name: "Revielle Age-Defying Cream", price: 29.95 };
 const STORAGE_KEY = "revielle_cart_qty";
 
 export function CartProvider({ children }: { children: ReactNode }) {
