@@ -23,6 +23,10 @@ export default function TermsOfService() {
           body: "Revielle Skincare is not liable for any indirect, incidental, or consequential damages arising from the use of our products or website. Our liability is limited to the amount paid for the relevant order.",
         },
         {
+          heading: "Product Packaging Disclaimer",
+          body: "Packaging may vary from the images shown on this website. Product formulation and quality remain consistent regardless of packaging appearance.",
+        },
+        {
           heading: "Governing Law",
           body: "These terms are governed by the laws of the State of New York, without regard to conflict of law provisions. Any disputes will be resolved in the courts of New York County.",
         },
